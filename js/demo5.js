@@ -1,6 +1,6 @@
 var canvas = document.querySelector('#scene');
 var width = canvas.offsetWidth,
-    height = canvas.offsetHeight;
+    height = canvas.offsetHeight-100;
 
 var renderer = new THREE.WebGLRenderer({
     canvas: canvas,
@@ -80,7 +80,7 @@ function onResize() {
     canvas.style.width = '';
     canvas.style.height = '';
     width = canvas.offsetWidth;
-    height = canvas.offsetHeight;
+    height = canvas.offsetHeight - 100;
     camera.aspect = width / height;
     camera.updateProjectionMatrix();  
     renderer.setSize(width, height);
