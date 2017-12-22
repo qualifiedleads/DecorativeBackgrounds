@@ -106,7 +106,7 @@ main {
 	grid-template-rows: auto auto 4em;
 	grid-template-areas: 'header ...'
 	'... ...'
-	'github demos';
+	'github footer-links';
 }
 
 .content--fixed a {
@@ -118,12 +118,13 @@ main {
 	position: relative;
 	z-index: 100;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: flex-start;
 	align-items: center;
 	align-self: start;
 	grid-area: header;
 	justify-self: start;
+	justify-content: center;
 }
 
 .codrops-header__title {
@@ -136,11 +137,13 @@ main {
 
 .codrops-header p{
 	color: #aaa;
-	text-align: center;
 	max-width: 200px;
-	font-size: 14px;
-	letter-spacing: .4px;
+	font-size: 11px;
+	letter-spacing: 2.4px;
 	margin: 0;
+	text-transform: uppercase;
+	word-spacing: 5px;
+	padding-left: 15px;
 }
 
 .info {
@@ -243,6 +246,12 @@ a.demo--current {
 	top: -50vh;
 	left: 50%;
 	margin-left: -75vmin;
+}
+footer{
+	grid-area: footer-links;
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: flex;
 }
 
 @media screen and (min-width: 55em) {
