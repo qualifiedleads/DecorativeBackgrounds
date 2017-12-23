@@ -103,9 +103,8 @@ main {
 	padding: 1.5em;
 	pointer-events: none;
 	grid-template-columns: 50% 50%;
-	grid-template-rows: auto auto 4em;
+	grid-template-rows: auto  4em;
 	grid-template-areas: 'header ...'
-	'... ...'
 	'github footer-links';
 }
 
