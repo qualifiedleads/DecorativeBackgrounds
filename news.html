@@ -3,8 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>jQuery Plugin - Social Stream Network Wall</title>
+
 <link rel="stylesheet" type="text/css" href="css/layout.css" media="all" />
 <link rel="stylesheet" type="text/css" href="css/dcsns_wall.css" media="all" />
+
+<link rel="stylesheet" type="text/css" href="css/demo5.css" />
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script type="text/javascript" src="inc/js/jquery.plugins.js"></script>
@@ -16,57 +19,20 @@
 jQuery(document).ready(function($){
 	$('#social-stream').dcSocialStream({
 		feeds: {
-			twitter: {
-				id: '#puso'
-			},
 			rss: {
-				id: 'http://feeds.feedburner.com/DesignChemical',
+				id: 'http://aitrends.com/feed',
 				out: 'intro,thumb,title,text,share'
 			},
-			stumbleupon: {
-				id: 'remix4'
-			},
-			facebook: {
-				id: '157969574262873',
-				out: 'intro,thumb,text,user,share'
-			},
 			google: {
-				id: '111470071138275408587'
-			},
-			delicious: {
-				id: 'designchemical'
+				id: '107785538899595981479'
 			},
 			vimeo: {
-				id: 'brad'
+				id: 'Advanced Machine Learning - 2016'
 			},
 			youtube: {
-				id: 'FilmTrailerZone/UUPPPrnT5080hPMxK1N4QSjA',
+				id: 'channel/UCDS20hpBFiv_Kdp5Ibh0vew',
 				thumb: 'medium',
 				out: 'intro,thumb,title,user,share'
-			},
-			pinterest: {
-				id: 'jaffrey,designchemical/design-ideas',
-				out: 'thumb,share,intro'
-			},
-			flickr: {
-				id: ''
-			},
-			lastfm: {
-				id: 'lastfm'
-			},
-			dribbble: {
-				id: 'frogandcode'
-			},
-			deviantart: {
-				id: 'isacg'
-			},
-			tumblr: {
-				id: 'richters',
-				thumb: 250
-			},
-			instagram: {
-				id: '!186786085',
-				accessToken: '186786085.91dbf99.da4d8fab71544cdba8645bd0a02f07a1'
 			}
 		},
 		rotate: {
@@ -76,18 +42,14 @@ jQuery(document).ready(function($){
 			layout: 'modern',
 			colour: 'dark'
 		},
-		twitterId: 'designchemical',
 		control: false,
 		filter: true,
 		wall: true,
 		center: true,
 		cache: false,
-		max: 'limit',
-		limit: 3,
-		iconPath: 'images/dcsns-dark/',
-		imagePath: 'images/dcsns-dark/'
+		max: 'limit'
 	});
-				 
+
 });
 </script>
 <style>
@@ -99,60 +61,44 @@ h3 {text-align: center;}
 </head>
 
 <body>
+		<main>
+				<div class="content content--fixed">
+					<header class="codrops-header">
+						<img src="img/logo.png"  class="codrops-header__title">
+						<p>Theoretical uniform distribution & Ky</p>
+					</header>
+					<nav class="codrops-links header-links">
+						<ul>
+							<li><a href="news.html">Data Science News</a></li>
+							<li><a href="about.html">About</a></li>
+						</ul>
+					</nav>
+					<footer>
+						<nav class="codrops-links">
+							<ul>
+								<li><a href="">Email</a></li>
+								<li><a href="">Company Address</a></li>
+							</ul>
+						</nav>
+					</footer>
+				</div>
+
+				<div class="content main">
+						<div id="">
+								<div id="">
+								<!-- Begin Question Block -->
+								<div class="pad-btm">
+							<div id="wall">
+							<div id="social-stream"></div>
+							</div>
+
+				</div>
+
+			</main>
 
 <!-- Begin Second Wrapper -->
 
-<div id="wrapper">
- 
-  <div id="container"> 
-  <!-- Begin Question Block -->
 
-  <div class="pad-btm">
-	
-	<div id="nav-container">
-		<ul id="dctsp-nav">
-			<li><a href="index.html">Documentation</a></li>
-			<li><a href="example_1.html">Rotating Feed Demos</a>
-				<ul>
-					<li><a href="example_1.html">Default Settings</a></li>
-					<li><a href="example_2.html">Multiple Feeds</a></li>
-					<li><a href="example_3.html">Custom Output</a></li>
-				</ul>
-			</li>
-			
-			<li><a href="wall.html">Creating A Network Wall</a></li>
-			<li><a href="example_4.html">Wall Layouts</a>
-				<ul>
-					<li><a href="example_4.html">Classic</a></li>
-					<li><a href="example_5.html">Classic - Random</a></li>
-					<li><a href="example_6.html">Classic - Responsive</a></li>
-					<li><a href="example_7.html">Modern - Dark</a></li>
-					<li><a href="example_8.html">Modern - Light</a></li>
-				</ul>
-			</li>
-		</ul>
-		</div>
-	</div>
-	
-<h3>Centered Responsive Social Network Wall Demo - Dark Modern</h3>
-<div id="wall">
-	
-	<div id="social-stream"></div>
-
-<div class="clear" style="margin-bottom: 20px;"></div>
-
-<h4>Note:</h4>
-<p>Twitter - to set up your Twitter API credentials see <a href="index.html#twitter-api">Social Networks Details -> Twitter API Credentials</a>.</p>
-<p>Google + - to set up your Google API key see <a href="index.html#tag-position">Plugin Options -> Creating Your Own Google API key</a>.</p>
-<p>Instagram is not included in the demo as this requires you to set up your own client ID in order to access the API - see <a href="index.html#tag-position-instagram">Creating Your Own Instagram API Client ID & Access Token</a> for more information and step-by-step instructions.</p>
-
-</div>
-
-  
-  <div id="copyright">
-	jQuery Social Stream plugin was created by <a href="http://www.designchemical.com">Design Chemical</a>.
-  </div>
-</div>
 <!-- End Wrapper -->
 </body>
 </html>
