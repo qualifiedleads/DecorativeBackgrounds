@@ -16,7 +16,7 @@ body {
 	color: #57585c;
 	color: var(--color-text);
 	background-color: #000;
-	background-color: var(--color-bg);
+	background-color: #0F1617;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -80,15 +80,21 @@ main {
 }
 
 .content {
-	position: relative;
-	display: grid;
 	justify-content: center;
-	align-items: top;
+	display: grid;
 	align-content: center;
-	margin: 0 auto;
 	min-height: 100vh;
+	position: relative;
+	align-items: top;
+	margin: 0 auto;
 }
-
+.news{
+	display: block;
+	padding-top: 120px;
+}
+.dcsns-toolbar{
+	display: none;
+}
 .content--fixed {
 	position: fixed;
 	z-index: 10000;
