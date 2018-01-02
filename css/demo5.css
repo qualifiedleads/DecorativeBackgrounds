@@ -40,7 +40,9 @@
 	flex-direction: column;
 	justify-content: space-between;
 	width: 100%;
+	height: 100%;
 }
+
 @media screen and (max-width: 55em) {
 	.content__title {
 		font-size: 3.5em;

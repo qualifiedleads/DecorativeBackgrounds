@@ -80,7 +80,7 @@
 	left: auto;
 }
 .stream {
-	margin: 0 auto!important;
+	margin: 0 auto !important;
     display: grid;
     max-width: 1024px;
     grid-template-columns: 1fr 1fr 1fr 1fr;

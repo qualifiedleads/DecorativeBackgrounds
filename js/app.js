@@ -1,6 +1,6 @@
 
 (function(){
-  $.get("https://feeds.feedburner.com/ResearchDiscussions-DataScienceCentral", function(data) {
+  $.get("http://feeds.feedburner.com/ResearchDiscussions-DataScienceCentral?format=xml", function(data) {
     var $xml = $(data);
     $xml.find("entry").each(function() {
         var $this = $(this),
@@ -16,11 +16,9 @@
         html_container.innerHTML = item.content;
         var src = "img/logo.png";
         var img = html_container.querySelector('img');
-        
         if(img){
           src = img.getAttribute('src');
         }
-
         var date = new Date(item.pubDate)
         var html =`
         <li rel="24591004" class="dcsns-li dcsns-youtube dcsns-feed-0">
@@ -29,8 +27,7 @@
         <img src="${src}" alt="" style="opacity: 1; display: inline;">
         </a></span><span class="section-title">${item.title}</span>
         <span class="section-user"></span>
-        <span>${formatDate(date)}</span>
-        `;
+        <span>${formatDate(date)}</span>`;
 
         $('ul.stream').append(html).css('opacity',0).show().fadeTo(800,1);
     });
