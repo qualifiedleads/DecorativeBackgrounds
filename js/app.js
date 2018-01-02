@@ -7,7 +7,7 @@
         var $this = $(this),
             item = {
                 title: $this.find("title").text(),
-                link: $this.find("link").attr("href"),
+                link: $this.find("link").text(),
                 description: $this.find("description").text(),
                 pubDate: $this.find("pubDate").text(),
                 author: $this.find("author").text(),
@@ -25,10 +25,10 @@
         <li rel="24591004" class="dcsns-li dcsns-youtube dcsns-feed-0">
         <div class="inner"><span class="section-thumb">
         <a href="${item.link}" title="${item.title}">
-        <img src="${src}" alt="" style="opacity: 1; display: inline;">
-        </a></span><span class="section-title">${item.title}</span>
+        <h2 class="section-title">${item.title}</h2>
+        </a></span>
         <span class="section-user"></span>
-        <span>${formatDate(date)}</span>`;
+        <span class="__date">${formatDate(date)}</span>`;
 
         $('ul.stream').append(html).css('opacity',0).show().fadeTo(800,1);
     });
