@@ -1,14 +1,15 @@
 
 (function(){
-  $.get("https://cors-anywhere.herokuapp.com/http://feeds.feedburner.com/ResearchDiscussions-DataScienceCentral?format=xml", function(data) {
+  $.get("https://cors-anywhere.herokuapp.com/https://www.sciencedaily.com/rss/computers_math/artificial_intelligence.xml", function(data) {
     var $xml = $(data);
-    $xml.find("entry").each(function() {
+    console.log(data)
+    $xml.find("item").each(function() {
         var $this = $(this),
             item = {
                 title: $this.find("title").text(),
                 link: $this.find("link").attr("href"),
                 description: $this.find("description").text(),
-                pubDate: $this.find("updated").text(),
+                pubDate: $this.find("pubDate").text(),
                 author: $this.find("author").text(),
                 content: $this.find("content").text()
         }
