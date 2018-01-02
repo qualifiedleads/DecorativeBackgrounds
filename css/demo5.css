@@ -31,6 +31,16 @@
 	text-transform: uppercase;
 }
 
+.modern.dark .stream li{
+	padding-bottom: 20px;
+}
+.modern .stream li .inner {
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+}
 @media screen and (max-width: 55em) {
 	.content__title {
 		font-size: 3.5em;
