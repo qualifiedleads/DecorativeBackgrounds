@@ -1,6 +1,6 @@
 
 (function(){
-  $.get("http://cors.io/?http://feeds.feedburner.com/ResearchDiscussions-DataScienceCentral?format=xml", function(data) {
+  $.get("https://cors-anywhere.herokuapp.com/http://feeds.feedburner.com/ResearchDiscussions-DataScienceCentral?format=xml", function(data) {
     var $xml = $(data);
     $xml.find("entry").each(function() {
         var $this = $(this),
