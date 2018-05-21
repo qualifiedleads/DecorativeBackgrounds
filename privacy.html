@@ -110,7 +110,7 @@ Company. Reg no: N171480794
 
 </div> <!-- /header -->
 
-          
+<div class="conteiner">         
 <div class="one_line_col">
 
   <h2 id="owner_of_the_data">Data Controller and Owner</h2>
@@ -497,6 +497,7 @@ In addition to any opt out offered by any of the services below, the User may op
 
 
       <hr />
+<<<<<<< HEAD
 	  </div>
 	</div>
 </div>
@@ -515,6 +516,103 @@ In addition to any opt out offered by any of the services below, the User may op
             <div class="expand-content" style="display: block;">
               <p>
                 This Application uses Cookies to save the User's session and to carry out other activities that are strictly necessary for the operation of this Application, for example in relation to the distribution of traffic.
+=======
+    </div>
+
+
+
+
+
+
+
+    <div id="iubenda_policy">
+      <div class="iub_content legal_pp">
+
+
+        <div class="one_line_col">
+          <h2 style="padding-top: 0;">Cookie Policy of www.iubenda.com</h2>
+          <p>Cookies consist of portions of code installed in the browser that assist the Owner in providing the Service according to the purposes described. Some of the purposes for which Cookies are installed may also require the User's consent.</p>
+          <p>Where the installation of Cookies is based on consent, such consent can be freely withdrawn at any time following the instructions provided in this document.</p>
+          <h3 id="technical_cookies">Technical Cookies and Cookies serving aggregated statistical purposes</h3>
+          <ul class="for_boxes">
+            <li>
+              <div class="box_primary box_10 expand collapsed">
+                <h3 class="expand-click w_icon_24 icon_general">Activity strictly necessary for the functioning of the Service</h3>
+                <div class="expand-content" style="display: none;">
+                  <p>
+                    This Application uses Cookies to save the User's session and to carry out other activities that are strictly necessary for the operation of this Application, for example in relation to the distribution of traffic.
+                  </p>
+                </div>
+                <!-- /expand-content -->
+              </div>
+              <!-- /expand -->
+            </li>
+
+            <li>
+              <div class="box_primary box_10 expand collapsed">
+                <h3 class="expand-click w_icon_24 icon_general">Activity regarding the saving of preferences, optimization, and statistics</h3>
+                <div class="expand-content" style="display: none;">
+                  <p>
+                    This Application uses Cookies to save browsing preferences and to optimize the User's browsing experience. Among these Cookies are, for example, those used for the setting of language and currency preferences or for the management of first party statistics employed directly by the Owner of the site.
+                  </p>
+                </div>
+                <!-- /expand-content -->
+              </div>
+              <!-- /expand -->
+            </li>
+
+          </ul>
+
+          <h3 id="other_types_cookies">Other types of Cookies or third parties that install Cookies</h3>
+          <p>Some of the services listed below collect statistics in an anonymized and aggregated form and may not require the consent of the User or may be managed directly by the Owner - depending on how they are described - without the help of third parties.</p>
+          <p>If any third party operated services are listed among the tools below, these may be used to track Users’ browsing habits – in addition to the information specified herein and without the Owner’s knowledge. Please refer to the privacy policy of the listed services for detailed information.</p>
+          <ul class="for_boxes">
+            <li>
+              <div class="box_primary box_10 expand collapsed">
+                <h3 class="expand-click w_icon_24 policyicon_purpose_211522">Analytics</h3>
+                <div class="expand-content" style="display: none;">
+
+                 <p>The services contained in this section enable the Owner to monitor and analyze web traffic and can be used to keep track of User behavior.</p>
+
+
+
+
+                 <h4>Facebook Ads conversion tracking (Facebook, Inc.)</h4>
+
+                 <div class="wrap">
+                   <p>Facebook Ads conversion tracking is an analytics service provided by Facebook, Inc. that connects data from the Facebook advertising network with actions performed on this Application.</p>
+                 </div>
+
+
+                 <p>
+                  Personal Data collected:
+                  Cookies and Usage Data.
+                </p>
+
+
+
+                <p>
+                  Place of processing:
+                  US
+                  –
+                  <a href="https://www.facebook.com/about/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+
+                </p>
+
+
+
+
+                <h4>Google AdWords conversion tracking (Google Inc.)</h4>
+
+                <div class="wrap">
+                 <p>Google AdWords conversion tracking is an analytics service provided by Google Inc. that connects data from the Google AdWords advertising network with actions performed on this Application.</p>
+               </div>
+
+
+               <p>
+                Personal Data collected:
+                Cookies and Usage Data.
+>>>>>>> parent of c5d9e61... s12
               </p>
             </div>
              <!-- /expand-content -->
@@ -1430,9 +1528,35 @@ US
     </div>
 
 
-
+</div> 
 
 		</main>
+
+    <script type="text/javascript">
+
+    var privacyPolicy = new PrivacyPolicy({
+      id:131722,
+      noBrand:true 
+    })
+
+    $(document).ready(function() {
+
+      privacyPolicy.start();
+
+      $(".expand-content").hide();
+      $(".expand").addClass("collapsed");
+      $(".expand .expand-click").click(function () {
+        $(this).parents(".expand").toggleClass("collapsed");
+        $(this).parents(".expand").toggleClass("expanded");
+        $(this).parents(".expand-item").toggleClass("hover");
+        $(this).children('.icon-17').toggleClass("icon-expand");
+        $(this).children('.icon-17').toggleClass("icon-collapse");
+        $(this).parents('.expand').children('.expand-content').slideToggle("fast");
+      });
+
+    });
+
+  </script>
 		<script src="js/demo.js"></script>
 		<script src="js/three.min.js"></script>
 		<script src="js/perlin.js"></script>
