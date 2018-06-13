@@ -1,0 +1,94 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.radiantmediatechs.com/rmp/4.6.27/js/rmp.min.js" integrity="sha384-E8aO4S1voMy797AgTnAkTxxgLOwRyax0iuY2piZek1FX7jlAB+zSvxJTt629ISz5"
+    crossorigin="anonymous"></script>
+  <style>
+    body,
+    .rmpPlayer {
+      margin: 0 !important
+    }
+
+    .video-player {
+      position: relative;
+    }
+
+    #click {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      letter-spacing: .08em;
+      position: absolute;
+      bottom: 2.8em;
+      left: 0;
+      text-decoration: none;
+      color: white;
+      padding: .7em 1em;
+      background: rgba(255, 26, 26, 1);
+    }
+    #full-banner-link{
+      width: 300px;
+      height: 250px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 4;
+    }
+    .rmp-chrome .rmp-outline {
+      z-index: 99999;
+    }
+  </style>
+</head>
+<!-- Include Radiant Media Player JavaScript file in your <body> or <head> -->
+
+<body>
+  <div class="video-player">
+    <!-- Set up your wrapper div with its unique id -->
+    <a id="full-banner-link" href="tel:+1-800-384-4690"></a>
+    <div id="rmpPlayer"></div>
+    <a id="click" href="tel:+1-800-384-4690">CALL NOW</a>
+  </div>
+  <script>
+    var settings = {
+      licenseKey: 'Z3FmdGZybXpuZkAxNTE3OTEw',
+      width: 300,
+      height: 250,
+      hint: {
+        sharing: 'Share',
+        quality: 'Quality',
+        speed: 'Speed',
+        captions: 'Captions',
+        audio: 'Audio',
+        live: 'Live',
+        cast: 'Cast',
+        airplay: 'AirPlay',
+        playlist: 'Playlist',
+        related: 'Related',
+        upNext: 'Up Next'
+      },
+      // autoplay if needs be
+	  muted: true,
+      autoplay: true,
+      mutedAutoplayOnMobile: true,
+      mutedAutoplayOnMacosSafari11Plus: true,
+      srcChangeAutoplay: true,
+      // hide controls if needs be
+      // hideControls: true,
+      ads: true,
+      adTagUrl: 'https://vastengine.rtb.cat/?593006214&cb=__random-number__',
+      // waterfalling if needs be
+      adTagWaterfall: [
+        'https://vastengine.rtb.cat/?593006214&cb=__random-number__'
+      ],
+      adOutStream: true,
+      poster: 'https://console.cloud.google.com/storage/browser/radiant_player/images/flawless.jpg',
+      // end of video poster if different from poster
+      endOfVideoPoster: 'https://console.cloud.google.com/storage/browser/radiant_player/images/flawless.jpg'
+    };
+    var elementID = 'rmpPlayer';
+    var rmp = new RadiantMP(elementID);
+    rmp.init(settings);
+  </script>
+
+</body>
+
+</html>
