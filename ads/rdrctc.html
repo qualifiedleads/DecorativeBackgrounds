@@ -2,9 +2,35 @@
   <head>
     <meta charset="utf-8">
     <title>Phone Call</title>
-        <meta http-equiv="refresh" content="0;URL='tel:+<script src="//js.callcdn.com/dist/ringba.com.js?c=CAadd6e3eaec6d49b881f1fbd16fbd0689"></script>'" />    
+        <meta http-equiv="refresh" content="" />    
   </head>
   <body>
     <img src="https://fasearily-formalian.com/conversion.gif?cid=OPTIONAL&payout=OPTIONAL&txid=OPTIONAL" width="1" height="1"/> 
+
+   <script src="//code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	 
+	<script src="//js.callcdn.com/js/min/ringba.com.js"></script>
+	 
+	<!-- Start of Ringba.com Call Tracking tag -->
+	<script>
+	    ringba.campaign('CAadd6e3eaec6d49b881f1fbd16fbd0689');
+	             
+	    $(function()
+	     {
+	        ringba.getNumber({
+	 
+	            // Tags can be specified by adding the tag:'value' and will be tracked for every impression.   
+	            landingPageId:'testId'
+	                    
+	            },function (numberPoolNumber) {
+	            
+	                 // Phone numbers will be inserted into all HTML tags with the class 'phone-number'
+	  	             $('meta').attr('content',"0;URL='tel:+'" + numberPoolNumber);
+	                    
+	            },function(){
+	                alert('Error function - Number not received.');
+	        });
+	    });
+	</script>
   </body>
 </html>
