@@ -29,7 +29,7 @@
 	                 // Phone numbers will be inserted into all HTML tags with the class 'phone-number'
 	  	             $('.phone-number').attr('href',"tel:+" + numberPoolNumber.replace(VRegExp, '') );
 
-	  	             alert("tel:+" + numberPoolNumber);
+	  	             alert("tel:+" + numberPoolNumber.replace(VRegExp, ''));
 	  	             $('.phone-number').trigger("click");
 	                    
 	            },function(){
