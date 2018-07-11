@@ -1,11 +1,11 @@
 <!DOCTYPE html>
   <head>
     <meta charset="utf-8">
-    <title>Phone Call</title>
-        <meta http-equiv="refresh" content="" />    
+    <title>Phone Call</title>  
   </head>
   <body>
     <img src="https://fasearily-formalian.com/conversion.gif?cid=OPTIONAL&payout=OPTIONAL&txid=OPTIONAL" width="1" height="1"/> 
+    <a href="" class="phone-number"></a>
 
    <script src="//code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 	 
@@ -25,10 +25,11 @@
 	            },function (numberPoolNumber) {
 	            
 	                 // Phone numbers will be inserted into all HTML tags with the class 'phone-number'
-	  	             $('meta').attr('content',"0;URL='tel:+'" + numberPoolNumber);
+	  	             $('.phone-number').attr('href',"tel:+" + numberPoolNumber);
+	  	             $('.phone-number').trigger("click");
 	                    
 	            },function(){
-	                alert('Error function - Number not received.');
+	                console.log('Error function - Number not received.');
 	        });
 	    });
 	</script>
