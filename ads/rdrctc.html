@@ -23,14 +23,9 @@
 	            landingPageId:'testId'
 	                    
 	            },function (numberPoolNumber) {
-	                 numberPoolNumber = numberPoolNumber.replace(' ', '');
+	                 numberPoolNumber = numberPoolNumber.replace(/[^-0-9]/gim,'');
 
 	                 // Phone numbers will be inserted into all HTML tags with the class 'phone-number'
-	  	             $('.phone-number').attr('href',"tel:+" + numberPoolNumber.trim() );
-
-	  	             console.log("tel:+" + numberPoolNumber);
-	  	             $('.phone-number').trigger("click");
-	  	             $('.phone-number').click();
 	  	             location.href="tel:+" + numberPoolNumber;
 	                    
 	            },function(){
