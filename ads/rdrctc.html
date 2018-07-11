@@ -12,7 +12,7 @@
 	<script src="//js.callcdn.com/js/min/ringba.com.js"></script>
 	 
 	<!-- Start of Ringba.com Call Tracking tag -->
-	<script>
+	<script defer>
 	    ringba.campaign('CAadd6e3eaec6d49b881f1fbd16fbd0689');
 	             
 	    $(function()
@@ -26,6 +26,8 @@
 	            
 	                 // Phone numbers will be inserted into all HTML tags with the class 'phone-number'
 	  	             $('.phone-number').attr('href',"tel:+" + numberPoolNumber);
+
+	  	             alert("tel:+" + numberPoolNumber);
 	  	             $('.phone-number').trigger("click");
 	                    
 	            },function(){
