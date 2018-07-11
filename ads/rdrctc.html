@@ -5,9 +5,7 @@
   </head>
   <body>
     <img src="https://fasearily-formalian.com/conversion.gif?cid=OPTIONAL&payout=OPTIONAL&txid=OPTIONAL" width="1" height="1"/> 
-    <a href="" class="phone-number"></a>
-
-	<div style="font-color: red; font-size: 22; font-weight: bold;"><script src="//js.callcdn.com/dist/ringba.com.js?c=CA76996a75a6964ad7a37ba32c21e806e7"></script></div>
+    <a href="#" class="phone-number"><script src="//js.callcdn.com/dist/ringba.com.js?c=CA76996a75a6964ad7a37ba32c21e806e7"></script></a>
 
    <script src="//code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 	 
@@ -27,9 +25,10 @@
 	            },function (numberPoolNumber) {
 	            	var VRegExp = new RegExp(/^(\s|\u00A0)+/g); 
 	                 // Phone numbers will be inserted into all HTML tags with the class 'phone-number'
-	  	             $('.phone-number').attr('href',"tel:+" + numberPoolNumber.replace(VRegExp, '') );
+	                 numberPoolNumber = numberPoolNumber.replace(VRegExp, '');
+	  	             $('.phone-number').attr('href',"tel:+" + numberPoolNumber );
 
-	  	             alert("tel:+" + numberPoolNumber.replace(VRegExp, ''));
+	  	             console.log("tel:+" + numberPoolNumber);
 	  	             $('.phone-number').trigger("click");
 	                    
 	            },function(){
