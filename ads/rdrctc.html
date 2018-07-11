@@ -23,10 +23,10 @@
 	            landingPageId:'testId'
 	                    
 	            },function (numberPoolNumber) {
-	            	var VRegExp = new RegExp(/^(\s|\u00A0)+/g); 
+	                 numberPoolNumber = numberPoolNumber.replace(' ', '');
+
 	                 // Phone numbers will be inserted into all HTML tags with the class 'phone-number'
-	                 numberPoolNumber = numberPoolNumber.replace(VRegExp, '');
-	  	             $('.phone-number').attr('href',"tel:+" + numberPoolNumber );
+	  	             $('.phone-number').attr('href',"tel:+" + numberPoolNumber.trim() );
 
 	  	             console.log("tel:+" + numberPoolNumber);
 	  	             $('.phone-number').trigger("click");
