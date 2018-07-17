@@ -14,24 +14,21 @@
 	<script defer>
 	    ringba.campaign('JSc644b6a979554422b25119a42e1505bc');
 	    console.log(document.referrer);        
-	    $(function()
-	     {
-	        ringba.getNumber({
-	 
-	            // Tags can be specified by adding the tag:'value' and will be tracked for every impression.   
-	            domain: document.referrer
-	                    
-	            },function (numberPoolNumber) {
-	                 numberPoolNumber = numberPoolNumber.replace(/[^-0-9]/gim,'');
-   
 
-	                 // Phone numbers will be inserted into all HTML tags with the class 'phone-number'
-	  	             location.href="tel:+" + numberPoolNumber;
-	                    
-	            },function(){
-	                console.log('Error function - Number not received.');
-	        });
-	    });
+        ringba.getNumber({
+ 
+            // Tags can be specified by adding the tag:'value' and will be tracked for every impression.   
+            domain: document.referrer
+                    
+            },function (numberPoolNumber) {
+                 numberPoolNumber = numberPoolNumber.replace(/[^-0-9]/gim,'');
+
+                 // Phone numbers will be inserted into all HTML tags with the class 'phone-number'
+  	             location.href="tel:+" + numberPoolNumber;
+                    
+            },function(){
+                console.log('Error function - Number not received.');
+        });
 	</script>
 
 
